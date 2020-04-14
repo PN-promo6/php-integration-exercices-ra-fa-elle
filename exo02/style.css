@@ -30,7 +30,7 @@
 .list-group-item i.fa-trash-alt {
     flex-grow: 0;
     cursor: pointer;
-    color: #dc3545;
+    color: #979797;
     order: 3;
 }
 

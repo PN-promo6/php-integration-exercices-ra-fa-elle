@@ -5,6 +5,7 @@
     <title>Exo02</title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/5bb1d77498.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="script.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
@@ -26,30 +27,19 @@
                             </div>
                         </div>
                         <ul class="list-group mb-3">
-                            <li class="list-group-item">
-                                <i class="far fa-square done-icon"></i>
-                                <i class="far fa-check-square done-icon"></i>
-                                <span class="todo-text">Dire bonjour aux papillons</span>
-                                <i class="far fa-trash-alt"></i>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="far fa-square done-icon"></i>
-                                <i class="far fa-check-square done-icon"></i>
-                                <span class="todo-text">Manger des bananes</span>
-                                <i class="far fa-trash-alt"></i>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="far fa-square done-icon"></i>
-                                <i class="far fa-check-square done-icon"></i>
-                                <span class="todo-text">Adopter un guéridon</span>
-                                <i class="far fa-trash-alt"></i>
-                            </li>
-                            <li class="list-group-item done">
-                                <i class="far fa-square done-icon"></i>
-                                <i class="far fa-check-square done-icon"></i>
-                                <span class="todo-text">Se déplacer tel une chenille</span>
-                                <i class="far fa-trash-alt"></i>
-                            </li>
+                            <?php
+                            $todo = array("Dire bonjour aux papillons", "Manger des bananes", "Adopter une lampe à huile", "Se déplacer tel une chenille");
+                            foreach ($todo as $oneTodo) {
+                            ?>
+                                <li class="list-group-item">
+                                    <i class="far fa-square done-icon"></i>
+                                    <i class="far fa-check-square done-icon"></i>
+                                    <span class="todo-text"><?= $oneTodo ?></span>
+                                    <i class="far fa-trash-alt"></i>
+                                </li>
+                            <?php
+                            }
+                            ?>
                         </ul>
                         <button id="clearBtn" type="button" class="btn btn-dark btn-sm"> 🧻 Effacer la liste</button>
                     </div>
@@ -58,7 +48,7 @@
                             <div class="input-group">
                                 <input type="text" class="form-control" id="todo" placeholder="Ajouter un objectif">
                                 <div class="input-group-append">
-                                    <button type="submit" class="btn btn-ajout text-uppercase text-dark"><i class="fas fa-plus"></i> Ajouter !
+                                    <button type="submit" class="btn btn-ajout text-uppercase text-dark"><i class="fas fa-plus"></i>
                                     </button>
                                 </div>
                             </div>
